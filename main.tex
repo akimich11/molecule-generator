@@ -1,0 +1,93 @@
+\documentclass[a4paper,14pt]{extreport}
+
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{style/bsumain}
+\usepackage{style/bsudiplomatitle14}
+\usepackage{blindtext}
+\usepackage{float}
+
+\subfaculty{Кафедра биомедицинской информатики}
+\title{Генерация описаний химических соединений методами глубокого обучения}
+\author{Малыщика Акима Андреевича\\
+студента 3 курса 3 группы\\
+специальность "информатика"}
+\mentor{профессор кафедры БМИ\\
+Тузиков Александр Васильевич
+        }
+\reviewer{Орлович Юрий Леонидович \\
+          заведующий каведры БМИ}
+
+\usepackage{graphicx}
+\begin{document}
+\maketitle
+\setcounter{page}{2}
+\begin{center}
+  \large\bfseries{РЕФЕРАТ}
+\end{center}
+
+Курсовая работа, 20 стр., 5 иллюстр., 9 источников.
+
+\textbf{Ключевые слова:} ДЕСКРИПТОРЫ, МОЛЕКУЛЯРНЫЕ ФИНГЕРПРИНТЫ, SMILES.
+
+\textbf{Объекты исследования --} дескрипторы химических соединений, алгоритмы машинного обучения на основе дескрипторов.
+
+\textbf{Цель исследования --} изучение существующих молекулярных дескрипторов и алгоритмов на их основе.
+
+\textbf{Методы исследования --} системный подход, изучение соответствующей литературы и электронных источников.
+
+\textbf{В результате исследования} изучены графовые структуры, молекулярные фингерпринты и SMILES, исследованы алгоритмы обработки дескрипторов, рассмотрены архитектуры нейросетей на основе SMILES-описаний.
+
+\textbf{Области применения --} хемоинформатика, медицина, фармацевтика.
+
+\newpage
+  {
+    \renewcommand{\contentsname}{Содержание}
+    
+    \tableofcontents
+  }
+
+  \chapter*{Введение}
+  \addcontentsline{toc}{chapter}{Введение}
+  \label{c:introduction}
+
+Компьютерное моделирование лекарств — относительно быстро развивающаяся и достаточно перспективная отрасль IT-индустрии, в которой активно используются алгоритмы машинного обучения. Генеративные нейронные сети применяются для получения новых соединений, которые потенциально могут стать основой для лекарственных средств. Использование алгоритмов глубокого обучения позволяет ускорить и удешевить существующий процесс создания лекарственных препаратов. Также, засчёт использования искусственного интеллекта появляется возможность рассмотрения соединений, которых нет в существующих на данный момент химических базах данных. Соответственно, методы машинного обучения могут позволить получить новые соединения, которые по сравнению с известными будут более эффективны к заданной молекулярной мишени.
+
+Основная проблема такого подхода в том, что на данный момент не существует универсального метода кодирования химических соединений, который был бы лучше всех остальных в любой ситуации. Из анализа литературы можно сделать вывод, что наиболее перспективным форматом представления молекул в памяти компьютера сейчас являются SMILES-описания. Данный способ описания химических соединений позволяет применять алгоритмы машинного обучения и архитектуры нейронных сетей, используемые также при работе с естественными языками.
+
+Таким образом, подходы к созданию генеративных моделей для химических веществ будут похожи на подходы, используемые в задачах NLP. Одним из наиболее перспективных методов на данный момент является обучение архитектуры с энкодером и декодером, в которой энкодер преобразует подаваемые на вход описания молекул, а обученный декодер используется как генератор новых химических соединений с необходимыми свойствами.
+
+
+\textbf{Цель работы:} Получить описания химических веществ с заданными свойствами, которые будут эффективны к молекулярной мишени.
+
+\textbf{Задача работы:} Разработать генеративную нейронную сеть для генерации описаний химических соединений.
+
+
+  
+  
+
+  \chapter*{Список использованных источников}
+  \addcontentsline{toc}{chapter}{Список использованных источников}
+  \label{c:literature}
+\begin{enumerate}
+\item \label{itm:lit1} Введение в хемоинформатику: Компьютерное представление химических структур: учеб. пособие / Т.И. Маджидов, И.И. Баскин, И.С. Антипин, А.А. Варнек. – Казань, Москва, Страсбург, 2020 – 176 с.
+\item \label{itm:lit2} Чумаков А.А., Слижов Ю.Г. Система SMILES-кодирования молекулярных структур и её применение для решения научно-исследовательских задач. Национальный исследовательский Томский государственный университет, Электронное методическое пособие, 2017.–18 с.
+    
+    \item \label{itm:lit4} M.A. Shuldau et al. Development of molecular autoencoders as generators of protein inhibitors:
+Application for prediction of potential drugs against coronavirus SARS-CoV-2 //Proceedings of
+the 15th Ibterbational Conference on Pattern Recognition and Information Processing
+(PRIP’2021), Sep. 21-24, 2021, Minsk, Belarus, 2021.
+	\item \label{itm:lit5} Fingerprints – Screening and Similarity. – 2019. – 1 c. – URL: https://www.daylight.com/dayhtml/doc/theory/theory.finger.html  (дата обращения: 24.10.2021, 18:31)
+	\item \label{itm:lit6} A Practical Introduction to the Use of Molecular Fingerprints in Drug Discovery. – 2019. – 1 c. – URL: https://towardsdatascience.com/a-practical-introduction-to-the-use-of-molecular-fingerprints-in-drug-discovery-7f15021be2b1 (дата обращения: 02.11.2021, 15:28)
+	
+	\item \label{itm:toxic} Mayr A. et al. DeepTox: toxicity prediction using deep learning //Frontiers in Environmental Science. – 2016. – 80 c.
+	
+	\item \label{itm:lit7} Convolutional Networks on Graphs for Learning Molecular Fingerprints / David Duvenaud [и др.] // Harvard University, 2015 – 9 c.
+	\item \label{itm:lit8} SMILES – A Simplified Chemical Language. – 2019. – 1 c. – URL: https://www.daylight.com/dayhtml/doc/theory/theory.smiles.html (дата обращения: 15.11.2021, 22:03)
+
+	\item \label{itm:lit9} Bjerrum, E.J.; Sattarov, B. Improving Chemical Autoencoder Latent Space and Molecular De Novo Generation Diversity with Heteroencoders. – 2018. 131 c. https://doi.org/10.3390/biom8040131 
+    
+
+\end{enumerate}
+\end{document}
